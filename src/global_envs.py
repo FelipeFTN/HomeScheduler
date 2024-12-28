@@ -9,10 +9,14 @@ DEFAULT_SCHEDULE="daily.json"
 # This will store the current schedule in use
 SCHEDULE=""
 
+### Weekdays
+# This is just a dict with the weekdays' names
+# In order to use as a map for exceptions
+WEEKDAYS=["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
 ### Validations
 # This variables should be used to validate default bahaviours/values from schedule
 VALID_FORMATS=["24h", "12h", "24", "12"]
-
 VALID_SONG_EXT=[".mp3"]
 
 ### Operating System
@@ -33,5 +37,6 @@ s = Schedule(
         VALID_SONG_EXT,
         OPERATING_SYSTEM,
         MAC_AUDIO_PLAYER,
-        LINUX_AUDIO_PLAYER
+        LINUX_AUDIO_PLAYER,
+        WEEKDAYS
     )

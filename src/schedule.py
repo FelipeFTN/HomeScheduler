@@ -1,14 +1,15 @@
 import time 
+import datetime
 import os
 
 class Schedule:
-    index=0
     ### Schedule variables
     schedule=[]
     times_in_schedule=[]
     time_format=""
     time_title=""
     time_song=""
+    weekdays=[]
 
     ### Validations variables
     valid_formats=[]
@@ -20,9 +21,10 @@ class Schedule:
     os=""
 
 
-    def __init__(self, valid_formats, valid_song_ext, os, mac_ap, linux_ap):
+    def __init__(self, valid_formats, valid_song_ext, os, mac_ap, linux_ap, weekdays):
         self.valid_formats=valid_formats
         self.valid_song_ext=valid_song_ext
+        self.weekdays=weekdays
         self.linux_ap=linux_ap
         self.mac_ap=mac_ap
         self.os=os
@@ -33,6 +35,10 @@ class Schedule:
         self.schedule=schedule
 
         for t in schedule['schedule']:
+            if self.is_in_exception_day(t):
+                print(f"[+] Skipping exception on {t['title']} - {t['time']}")
+                continue
+
             self.times_in_schedule.append(t['time'])
 
         err = self.validate_schedule()
@@ -83,3 +89,15 @@ class Schedule:
             return f"[x] Invalid schedule song extension: {song_ext}"
 
         return "no-error"
+
+    def is_in_exception_day(self, t):
+        if t == None or 'exception' not in t:
+            return False
+
+        i = datetime.date.today().weekday()
+        exceptions = t['exception'].split(',')
+
+        if self.weekdays[i] in exceptions:
+            return True
+
+        return False
