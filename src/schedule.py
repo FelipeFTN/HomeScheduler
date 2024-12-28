@@ -35,10 +35,6 @@ class Schedule:
         self.schedule=schedule
 
         for t in schedule['schedule']:
-            if self.is_in_exception_day(t):
-                print(f"[+] Skipping exception on {t['title']} - {t['time']}")
-                continue
-
             self.times_in_schedule.append(t['time'])
 
         err = self.validate_schedule()
@@ -54,13 +50,31 @@ class Schedule:
             # Stuck schedule in this loop
             # checking for time update
             current_time = time.strftime('%X')[0:5] # "00:00:00" -> "00:00"
+            if current_time == "00:00":
+                print("[+] New day, new schedule.")
+
+                # Re-init schedule
+                self.init_schedule(self.schedule)
+                return self.run_schedule()
+
             time.sleep(5)
-            pass
-        
+
         for t in self.schedule['schedule']:
+            # I know it's duplicated code, but, who cares?
+            if current_time == "00:00":
+                print("[+] New day, new schedule.")
+
+                # Re-init schedule
+                self.init_schedule(self.schedule)
+                return self.run_schedule()
+
             if t['time'] == current_time:
                 self.time_title = t['title']
                 break
+            
+            if self.is_in_exception_day(t):
+                print(f"[+] Skipping exception on {t['title']} - {t['time']}")
+                continue
 
         # Schedule execution function will be called here
         self.times_in_schedule.remove(current_time)
