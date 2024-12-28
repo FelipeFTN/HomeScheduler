@@ -1,0 +1,45 @@
+{
+  "song": "bell.mp3",
+  "format": "24h",
+  "format_comment": "24h || 12h",
+  "schedule": [
+    {
+      "time": "6:00",
+      "time_comment": "depending on format: 6:00 || 6:30AM",
+      "title": "Wake Up",
+      "song": "wake-up-alarm.mp3",
+      "song_comment": "this will just be applied to this specific time"
+    },
+    {
+      "time": "7:00",
+      "title": "Pray"
+    },
+    {
+      "time": "8:00",
+      "title": "Breakfast"
+    },
+    {
+      "time": "10:00",
+      "title": "Work"
+    },
+    {
+      "time": "12:00",
+      "title": "Lunch"
+    },
+    {
+      "time": "18:30",
+      "title": "Get Ready to Church",
+      "exception": "monday",
+      "exception_comment_0": "monday || tuesday || wednesday || thursday || friday || saturday || sunday",
+      "exception_comment_1": "monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+    },
+    {
+      "time": "22:30",
+      "title": "Watch one course class"
+    },
+    {
+      "time": "23:00",
+      "title": "Pray & Go to Sleep"
+    }
+  ]
+}
