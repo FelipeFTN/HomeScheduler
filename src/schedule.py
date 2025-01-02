@@ -1,5 +1,6 @@
-import time 
+from playsound import playsound
 import datetime
+import time 
 import os
 
 class Schedule:
@@ -83,10 +84,10 @@ class Schedule:
     def execute_schedule(self):
         # Possibly the worst way to do this. But should work.
         if self.os == "Linux":
-            os.system(f"{self.linux_ap} ./songs/{self.time_song}")
-            os.system(f"say {self.time_title}")
+            playsound(f"./songs/{self.time_song}")
+            # os.system(f"say {self.time_title}") # Not working properly yet
         elif self.os == "Darwin":
-            os.system(f"{self.mac_ap} ./songs/{self.time_song}")
+            playsound(f"./songs/{self.time_song}")
             os.system(f"say {self.time_title}")
         else:
             print("[x] Please use a real operating system.")
