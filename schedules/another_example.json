@@ -1,0 +1,63 @@
+{
+  "song": "beep-alarm.mp3",
+  "format": "12h",
+  "format_comment": "24h || 12h",
+  "schedule": [
+    {
+      "time": "6:00AM",
+      "time_comment": "depending on format: 6:00 || 6:00AM",
+      "title": "Wake Up",
+      "song": "morning-chime.mp3",
+      "song_comment": "specific alarm sound for waking up"
+    },
+    {
+      "time": "7:30AM",
+      "title": "Morning Meditation"
+    },
+    {
+      "time": "8:00AM",
+      "title": "Breakfast"
+    },
+    {
+      "time": "9:00AM",
+      "title": "Start Work",
+      "song": "focus-alarm.mp3",
+      "song_comment": "calming sound to start work"
+    },
+    {
+      "time": "1:00PM",
+      "title": "Lunch Break"
+    },
+    {
+      "time": "3:00PM",
+      "title": "Coffee Break"
+    },
+    {
+      "time": "5:30PM",
+      "title": "End Work"
+    },
+    {
+      "time": "6:00PM",
+      "title": "Exercise"
+    },
+    {
+      "time": "7:00PM",
+      "title": "Dinner",
+      "exception": "saturday,sunday",
+      "exception_comment_0": "only applies to weekdays",
+      "exception_comment_1": "saturday,sunday"
+    },
+    {
+      "time": "9:00PM",
+      "title": "Read a Book"
+    },
+    {
+      "time": "10:30PM",
+      "title": "Prepare for Bed"
+    },
+    {
+      "time": "11:00PM",
+      "title": "Go to Sleep"
+    }
+  ]
+}

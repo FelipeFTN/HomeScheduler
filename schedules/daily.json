@@ -4,38 +4,54 @@
   "format_comment": "24h || 12h",
   "schedule": [
     {
-      "time": "6:00",
-      "time_comment": "depending on format: 6:00 || 6:30AM",
+      "time": "7:00",
+      "time_comment": "depending on format: 6:00 || 6:00AM",
       "title": "Wake Up",
       "song": "wake-up-alarm.mp3",
       "song_comment": "this will just be applied to this specific time"
-    },
-    {
-      "time": "7:00",
-      "title": "Pray"
     },
     {
       "time": "8:00",
       "title": "Breakfast"
     },
     {
-      "time": "10:00",
-      "title": "Work"
+      "time": "9:00",
+      "title": "Start Studying",
+      "song": "bell.mp3",
+      "song_comment": "default song used here"
     },
     {
       "time": "12:00",
-      "title": "Lunch"
+      "title": "Lunch Break"
+    },
+    {
+      "time": "14:30",
+      "title": "Short Nap",
+      "song": "wake-up-alarm.mp3",
+      "song_comment": "same song to wake up from a nap"
+    },
+    {
+      "time": "16:00",
+      "title": "Resume Studying"
     },
     {
       "time": "18:30",
-      "title": "Get Ready to Church",
-      "exception": "monday",
-      "exception_comment_0": "monday || tuesday || wednesday || thursday || friday || saturday || sunday",
-      "exception_comment_1": "monday,tuesday,wednesday,thursday,friday,saturday,sunday"
+      "title": "Get Ready for Church",
+      "exception": "sunday",
+      "exception_comment_0": "skip on Sundays",
+      "exception_comment_1": "only applies Monday to Saturday"
+    },
+    {
+      "time": "20:00",
+      "title": "Dinner"
+    },
+    {
+      "time": "21:00",
+      "title": "Leisure: Reading or Watching Videos"
     },
     {
       "time": "22:30",
-      "title": "Watch one course class"
+      "title": "Prepare for Sleep"
     },
     {
       "time": "23:00",

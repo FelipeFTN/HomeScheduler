@@ -1,0 +1,53 @@
+{
+  "song": "default-alarm.mp3",
+  "format": "24h",
+  "format_comment": "24h || 12h",
+  "schedule": [
+    {
+      "time": "6:30",
+      "time_comment": "depending on format: 6:30 || 6:30AM",
+      "title": "Morning Exercise",
+      "song": "exercise-alarm.mp3",
+      "song_comment": "specific alarm for this time"
+    },
+    {
+      "time": "7:00",
+      "title": "Breakfast"
+    },
+    {
+      "time": "9:00",
+      "title": "Start Work"
+    },
+    {
+      "time": "12:30",
+      "title": "Lunch Break"
+    },
+    {
+      "time": "15:00",
+      "title": "Afternoon Walk"
+    },
+    {
+      "time": "17:30",
+      "title": "End Work",
+      "exception": "friday",
+      "exception_comment_0": "friday || saturday || sunday",
+      "exception_comment_1": "monday,tuesday,wednesday,thursday,friday"
+    },
+    {
+      "time": "19:00",
+      "title": "Dinner"
+    },
+    {
+      "time": "20:00",
+      "title": "Leisure Activity"
+    },
+    {
+      "time": "22:00",
+      "title": "Prepare for Bed"
+    },
+    {
+      "time": "23:00",
+      "title": "Go to Sleep"
+    }
+  ]
+}

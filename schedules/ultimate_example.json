@@ -1,0 +1,66 @@
+{
+  "song": "soft-tone.mp3",
+  "format": "24h",
+  "format_comment": "24h || 12h",
+  "schedule": [
+    {
+      "time": "5:45",
+      "time_comment": "depending on format: 5:45 || 5:45AM",
+      "title": "Morning Run",
+      "song": "energetic-beat.mp3",
+      "song_comment": "motivational song for exercise"
+    },
+    {
+      "time": "6:30",
+      "title": "Shower & Get Ready"
+    },
+    {
+      "time": "7:00",
+      "title": "Plan the Day",
+      "song": "planning-music.mp3",
+      "song_comment": "relaxing music for planning"
+    },
+    {
+      "time": "8:00",
+      "title": "Start Work"
+    },
+    {
+      "time": "12:00",
+      "title": "Lunch Break"
+    },
+    {
+      "time": "15:30",
+      "title": "Stretch Break",
+      "song": "gentle-reminder.mp3",
+      "song_comment": "soft tone to remind stretching"
+    },
+    {
+      "time": "17:00",
+      "title": "Wrap Up Work"
+    },
+    {
+      "time": "18:00",
+      "title": "Prepare Dinner",
+      "exception": "friday",
+      "exception_comment": "Friday is takeout night"
+    },
+    {
+      "time": "19:30",
+      "title": "Family Time"
+    },
+    {
+      "time": "21:00",
+      "title": "Relax with a Movie or Music"
+    },
+    {
+      "time": "22:30",
+      "title": "Prepare for Sleep",
+      "song": "calm-night.mp3",
+      "song_comment": "soothing sound for bedtime preparation"
+    },
+    {
+      "time": "23:00",
+      "title": "Sleep"
+    }
+  ]
+}
