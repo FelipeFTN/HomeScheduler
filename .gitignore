@@ -3,3 +3,9 @@
 
 ### Ignore Python runtime cache
 **/__pycache__/
+
+### Ignore pesonal schedule
+**/personal.json
+
+### Ignore PIP installation
+**/HomeScheduler.egg-info/

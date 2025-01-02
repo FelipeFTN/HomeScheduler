@@ -10,11 +10,29 @@ Everything is setup inside the `schedules` folder. The `schedules` folder contai
 
 Take a look at the `schedules` folder to see how the json files are structured.
 
+## Installation
+
+You can install the scheduler by cloning the repository and running the `setup.py` file.
+
+```bash
+    pip install -e .
+```
+
+Or you can install it with pip. (Work in Progress)
+
+```bash
+    pip install HomeScheduler
+```
+
 ## How to run
 
-The scheduler is a simple command line application. You can run it by executing the `main.py` file.
+The scheduler is a simple command line application. You can run it by executing the `main.py` or installing it with pip.
 You also need to pass as an argument the json file in which you will be using on your schedule.
 
 ```bash
-    python3 main.py daily
+    # If you have installed the scheduler with pip
+    HomeScheduler daily.json
+
+    # If you have not installed the scheduler
+    python ./src/main.py daily.json
 ```
